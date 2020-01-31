@@ -1,4 +1,4 @@
-###sample-docker-java-app
+### sample-docker-java-app
 
 ```shell script
 mvn package docker:build
