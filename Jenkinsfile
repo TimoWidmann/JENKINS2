@@ -2,11 +2,11 @@ pipeline {
 
 	agent {docker {image 'maven:3.6.3'}}
 
-	environment {
-		dockerHome = tool 'JenkinsDocker'
-		mavenHome = tool 'JenkinsMaven'
-		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-	}
+	//environment {
+	//	dockerHome = tool 'JenkinsDocker'
+	//	mavenHome = tool 'JenkinsMaven'
+	//	PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	//}
 
 	stages{
 		stage('Checkout') {
