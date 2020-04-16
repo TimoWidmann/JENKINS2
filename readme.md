@@ -1,7 +1,4 @@
 ### sample-docker-java-app
 
-```shell script
-mvn package docker:build
-docker images
-docker run -p 8080:8080 sample/dockerjava
-```
+Dieser Branch enthält kein fabric8 Plugin und wird in der Jenkins Pipeline zu einem Docker Image gebaut.
+

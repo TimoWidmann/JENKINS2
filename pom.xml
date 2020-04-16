@@ -44,25 +44,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<plugin>
-				<groupId>io.fabric8</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.33.0</version>
-				<configuration>
-					<images>
-						<image>
-							<name>sample/dockerjava</name>
-							<build>
-								<contextDir>${project.basedir}</contextDir>
-								<assembly>
-									<descriptorRef>artifact</descriptorRef>
-								</assembly>
-							</build>
-						</image>
-					</images>
-				</configuration>
-			</plugin>
-
 		</plugins>
 	</build>
 
