@@ -1,6 +1,4 @@
 pipeline {
-
-	//
     agent any
 
 	environment {
@@ -43,5 +41,14 @@ pipeline {
 				}
 			}
 		}
+
+		stage('Build Docker Image') {
+            steps{
+                script{
+                    dockerImage = docker.build("softwarehandwerk/sample-docker-java-app:${env.BUILD_TAG}")
+                }
+            }
+        }
+
 	}
 }
