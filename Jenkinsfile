@@ -50,5 +50,16 @@ pipeline {
             }
         }
 
+        stage('Push Docker Image') {
+            steps{
+                script{
+                    docker.withRegistry('','dockerhub-credentials-id'){
+                        dockerImage.push()
+                        dockerImage.push('latest')
+                    }
+                }
+            }
+        }
+
 	}
 }
